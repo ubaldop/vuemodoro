@@ -19,10 +19,10 @@ If you need to customize the Pomodoro timer behavior, you can use one of the fol
 |----------------|-------------|----------------------------------------------------------------------------------------|------------------|
 | **minutes**          | `25`              | _sets the minutes of the countdown_                                                                                                        | Number           |
 | **seconds**          | `0`               | _sets the seconds of the countdowm_                                                                                                        | Number           |
-| **pomodoroLabel**    | `Pomodoro Timer`  | _adds a descriptive label to the timer container_                                                                                          | String           |
-| **startLabel**       | `Start`           | _adds a descriptive label to the start button of the timer_                                                                                | String           |
-| **pauseLabel**       | `Pause`           | _adds a descriptive label to the pause button of the timer_                                                                                | String           |
-| **resetLabel**       | `Reset`           | _adds a descriptive label to the reset button of the timer_                                                                                | String           |
+| **pomodoro-label**    | `Pomodoro Timer`  | _adds a descriptive label to the timer container_                                                                                          | String           |
+| **start-label**       | `Start`           | _adds a descriptive label to the start button of the timer_                                                                                | String           |
+| **pause-label**       | `Pause`           | _adds a descriptive label to the pause button of the timer_                                                                                | String           |
+| **reset-label**       | `Reset`           | _adds a descriptive label to the reset button of the timer_                                                                                | String           |
 | **muted**            | `false`         | _defines if the timer must play a sound when the countdown ends._          | Boolean          |
 | **theme**            | `dark`         | _defines the styles of the timer. It comes with three different styles. `bare`, `light` and `dark` are the available options._          | String           |
 
