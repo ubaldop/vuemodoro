@@ -1,6 +1,6 @@
 {
   "name": "vuemodoro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue component implementing a Pomodoro Timer",
   "main": "dist/pomodoro.umd.js",
   "module": "dist/pomodoro.esm.js",
