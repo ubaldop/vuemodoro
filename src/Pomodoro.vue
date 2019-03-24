@@ -1,6 +1,6 @@
 <template>
   <div class="vuemodoro" :class="vuemodoroTheme">
-    <div id="vuemodoro-label">{{getPomodoroLabel}}</div>
+    <div id="vuemodoro-label">{{pomodoroLabel}}</div>
     <div id="vuemodoro-timer">
       <span id="vuemodoro-counter">{{currentTime}}</span>
     </div>
@@ -11,19 +11,19 @@
         class="btn"
         :disabled="isStartDisabled"
         @click="runCountdown"
-      >{{getStartLabel}}</button>
+      >{{startLabel}}</button>
       <button
         id="vuemodoro-pause"
         class="btn"
         :disabled="isPauseDisabled"
         @click="pauseCountdown"
-      >{{getPauseLabel}}</button>
+      >{{pauseLabel}}</button>
       <button
         id="vuemodoro-reset"
         class="btn"
         :disabled="isResetDisabled"
         @click="resetCountdown"
-      >{{getResetLabel}}</button>
+      >{{resetLabel}}</button>
     </div>
   </div>
 </template>
@@ -97,18 +97,6 @@ export default {
   },
 
   computed: {
-    getPomodoroLabel: function() {
-      return this.pomodoroLabel;
-    },
-    getStartLabel: function() {
-      return this.startLabel;
-    },
-    getPauseLabel: function() {
-      return this.pauseLabel;
-    },
-     getResetLabel: function() {
-      return this.resetLabel;
-    },
     currentTime: function() {
       let minutes = this.min < 10 ? "0" + this.min : this.min;
       let seconds = this.secs < 10 ? "0" + this.secs : this.secs;
