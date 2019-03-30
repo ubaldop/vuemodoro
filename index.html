@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="keywords" content="pomodoro Pomodoro timer Timer GitHub github Vue vue">
+    <meta name="description" content="Pomodoro timer">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+</head>
+<title>Vuemodoro Demo</title>
+
+<body>
+    <header class="header">
+        <div class="content has-text-centered">
+            <img src="assets/logo.png" alt="vuemodoro" />
+            <h2 class="subtitle">Podomoro Timer as Vue single file component</h2>
+        </div>
+    </header>
+
+    <div id='app'>
+        <div>
+            <Ribbon text='I am on GitHub!' url='https://github.com/P3trur0/vuemodoro' />
+        </div>
+
+        <div :class="['tabs', 'is-centered']">
+            <ul>
+                <li :class="{'is-active' : activeTab === 1}" @click="activeTab = 1; activeDiv = 1"><a>Pomodoro</a></li>
+                <li :class="{'is-active' : activeTab === 2}" @click="activeTab = 2; activeDiv = 2"><a>Short Break</a>
+                </li>
+                <li :class="{'is-active' : activeTab === 3}" @click="activeTab = 3; activeDiv = 3"><a>Long Break</a>
+                </li>
+            </ul>
+        </div>
+        <div :class="[{'is-hidden' : activeDiv !== 1}, 'content', 'has-text-centered']">
+            <Pomodoro theme='dark' />
+        </div>
+        <div :class="[{'is-hidden' : activeDiv !== 2}, 'content', 'has-text-centered']">
+            <Pomodoro theme='light' :minutes='5' pomodoro-label='Short Break!' />
+        </div>
+        <div :class="[{'is-hidden' : activeDiv !== 3}, 'content', 'has-text-centered']">
+            <Pomodoro theme='bare' :minutes='10' pomodoro-label='Long Break!' />
+        </div>
+    </div>
+ 
+    <div class='container'>
+        <h4 class='title is-4 is-spaced'>Available properties</h4>
+        <table class='table is-centered is-bordered is-striped'>
+            <thead>
+                <tr>
+                    <th><strong>Properties</strong></th>
+                    <th><strong>Default</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Type</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>minutes</strong></td>
+                    <td><code>25</code></td>
+                    <td><em>sets the minutes of the countdown</em></td>
+                    <td>Number</td>
+                </tr>
+                <tr>
+                    <td><strong>seconds</strong></td>
+                    <td><code>0</code></td>
+                    <td><em>sets the seconds of the countdowm</em></td>
+                    <td>Number</td>
+                </tr>
+                <tr>
+                    <td><strong>pomodoro-label</strong></td>
+                    <td><code>Pomodoro Timer</code></td>
+                    <td><em>adds a descriptive label to the timer container</em></td>
+                    <td>String</td>
+                </tr>
+                <tr>
+                    <td><strong>start-label</strong></td>
+                    <td><code>Start</code></td>
+                    <td><em>adds a descriptive label to the start button of the timer</em></td>
+                    <td>String</td>
+                </tr>
+                <tr>
+                    <td><strong>pause-label</strong></td>
+                    <td><code>Pause</code></td>
+                    <td><em>adds a descriptive label to the pause button of the timer</em></td>
+                    <td>String</td>
+                </tr>
+                <tr>
+                    <td><strong>reset-label</strong></td>
+                    <td><code>Reset</code></td>
+                    <td><em>adds a descriptive label to the reset button of the timer</em></td>
+                    <td>String</td>
+                </tr>
+                <tr>
+                    <td><strong>muted</strong></td>
+                    <td><code>false</code></td>
+                    <td><em>defines if the timer must play a sound when the countdown ends.</em></td>
+                    <td>Boolean</td>
+                </tr>
+                <tr>
+                    <td><strong>theme</strong></td>
+                    <td><code>dark</code></td>
+                    <td><em>defines the styles of the timer. It comes with three different styles. <code>bare</code>,
+                            <code>light</code>
+                            and <code>dark</code> are the available options.</em></td>
+                    <td>String</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer class="footer has-background-white">
+        <!-- style='background-color: #fd7d81'-->
+        <div class="content has-text-centered">
+            <p>
+                <strong>Vuemodoro</strong> is crafted with love by <a href="https://githb.com/P3trur0">P3trur0</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vuemodoro"></script>
+<script src="https://unpkg.com/vue-ribbon"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            activeTab: 1,
+            activeDiv: 1
+        }
+    });
+</script>
+
+</html>
