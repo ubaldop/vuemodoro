@@ -13,14 +13,22 @@
     <header class="header">
         <div class="content has-text-centered">
             <img src="assets/logo.png" alt="vuemodoro" />
-            <h2 class="subtitle">Podomoro Timer as Vue single file component</h2>
-            <iframe id="iframe-star"
-                src="https://ghbtns.com/github-btn.html?user=P3trur0&amp;repo=vuemodoro&amp;type=star&amp;count=true"
-                allowtransparency="true" frameborder="0" scrolling="0" width="100" height="30"></iframe> 
-        </div>
+            <h4 class="title is-3 is-spaced">Pomodoro Timer as Vue single file component</h4>
+
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="bd-footer-iframe is-github">
+                            <a class="github-button" href="https://github.com/P3trur0/vuemodoro" data-show-count="true"
+                                aria-label="Star p3trur0/vuemodoro on GitHub">Star</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </header>
 
     <div id='app'>
+
         <div>
             <Ribbon text='I am on GitHub!' url='https://github.com/P3trur0/vuemodoro' />
         </div>
@@ -44,7 +52,7 @@
             <Pomodoro theme='bare' :minutes='10' pomodoro-label='Long Break!' />
         </div>
     </div>
- 
+
     <div class='container'>
         <h4 class='title is-4 is-spaced'>Available properties</h4>
         <table class='table is-centered is-bordered is-striped'>
@@ -115,7 +123,7 @@
     <footer class="footer has-background-white">
         <div class="content has-text-centered">
             <p>
-                <strong>Vuemodoro</strong> is crafted with love by <a href="https://github.com/P3trur0">P3trur0</a>.
+                <strong>Vuemodoro</strong> is crafted with love by <a href="https://githb.com/P3trur0">P3trur0</a>.
             </p>
         </div>
     </footer>
@@ -124,6 +132,8 @@
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/vuemodoro"></script>
 <script src="https://unpkg.com/vue-ribbon"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://buttons.github.io/buttons.js"></script>
 <script>
     Vue.config.productionTip = false
     new Vue({
