@@ -18,7 +18,7 @@ If you need to customize the Pomodoro timer behavior, you can use one of the fol
 | **Properties** | **Default** | **Description**                                                                        | **Type**         |
 |----------------|-------------|----------------------------------------------------------------------------------------|------------------|
 | **minutes**          | `25`              | _sets the minutes of the countdown_                                                                                                        | Number           |
-| **seconds**          | `0`               | _sets the seconds of the countdowm_                                                                                                        | Number           |
+| **seconds**          | `0`               | _sets the seconds of the countdown_                                                                                                        | Number           |
 | **pomodoro-label**    | `Pomodoro Timer`  | _adds a descriptive label to the timer container_                                                                                          | String           |
 | **start-label**       | `Start`           | _adds a descriptive label to the start button of the timer_                                                                                | String           |
 | **pause-label**       | `Pause`           | _adds a descriptive label to the pause button of the timer_                                                                                | String           |
